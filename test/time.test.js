@@ -1,6 +1,6 @@
 const {
     addTime,
-} = require('../');
+} = require('../src/time');
 
 test('add ten minutes', () => {
     expect(
