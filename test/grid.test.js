@@ -4,6 +4,7 @@ const {
     findNorth,
     printNorth,
     printAround,
+    printPath,
 } = require('../src/grid');
 
 describe('find the `1` in the grid', () => {
@@ -64,6 +65,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
             printAround(grid)
         ).toEqual([3, 7, 2, 4]);
     });
+
     test('output numbers immediately surrounding `1`', () => {
         const grid = [
             [0, 0, 0, 0, 0],
@@ -89,7 +91,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
 
         expect(
             printAround(grid)
-        ).toEqual([3, 4, 5, 0])
+        ).toEqual([3, 4, 5, 0]);
     });
 
     test('return 0 if there is no number north or east', () => {
@@ -103,7 +105,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
 
         expect(
             printAround(grid)
-        ).toEqual([0, 0, 8, 9])
+        ).toEqual([0, 0, 8, 9]);
     });
 
     test('return 0 if there is no number east or south', () => {
@@ -117,12 +119,11 @@ describe('return an array of the surrounding numbers, north to south', () => {
 
         expect(
             printAround(grid)
-        ).toEqual([2, 0, 0, 6])
+        ).toEqual([2, 0, 0, 6]);
     });
 });
 
 describe('return `0` if there is no number adjacent', () => {
-
     test('return surrounding numbers', () => {
         const grid = [
             [0, 0, 0, 0, 0],
