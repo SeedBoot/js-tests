@@ -22,14 +22,14 @@ describe('find the `1` in the grid', () => {
         ).toEqual({x: 2, y: 3});
     });
 
-    test('return the number', () => {
+    xtest('return the number', () => {
         expect(
             printPosition(grid)
         ).toEqual(1);
     });
 });
 
-describe('find the `2` above the `1` in the grid', () => {
+xdescribe('find the `2` above the `1` in the grid', () => {
     const grid = [
         [0, 0, 0, 0, 0],
         [0, 0, 0, 2, 0],
@@ -44,14 +44,14 @@ describe('find the `2` above the `1` in the grid', () => {
         ).toEqual({x: 3, y: 1});
     });
 
-    test('return the number', () => {
+    xtest('return the number', () => {
         expect(
             printNorth(grid)
         ).toEqual(2);
     });
 });
 
-describe('return an array of the surrounding numbers, north to south', () => {
+xdescribe('return an array of the surrounding numbers, north to south', () => {
     test('output numbers immediately surrounding `1`', () => {
         const grid = [
             [0, 0, 0, 0, 0],
@@ -66,7 +66,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
         ).toEqual([3, 7, 2, 4]);
     });
 
-    test('output numbers immediately surrounding `1`', () => {
+    xtest('output numbers immediately surrounding `1`', () => {
         const grid = [
             [0, 0, 0, 0, 0],
             [0, 3, 0, 0, 0],
@@ -80,7 +80,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
         ).toEqual([3, 7, 2, 0]);
     });
 
-    test('return 0 if there is no number west', () => {
+    xtest('return 0 if there is no number west', () => {
         const grid = [
             [0, 0, 0, 0, 0],
             [3, 0, 0, 0, 0],
@@ -94,7 +94,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
         ).toEqual([3, 4, 5, 0]);
     });
 
-    test('return 0 if there is no number north or east', () => {
+    xtest('return 0 if there is no number north or east', () => {
         const grid = [
             [0, 0, 0, 9, 1],
             [0, 0, 0, 0, 8],
@@ -108,7 +108,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
         ).toEqual([0, 0, 8, 9]);
     });
 
-    test('return 0 if there is no number east or south', () => {
+    xtest('return 0 if there is no number east or south', () => {
         const grid = [
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -123,7 +123,7 @@ describe('return an array of the surrounding numbers, north to south', () => {
     });
 });
 
-describe('return `0` if there is no number adjacent', () => {
+xdescribe('return `0` if there is no number adjacent', () => {
     test('return surrounding numbers', () => {
         const grid = [
             [0, 0, 0, 0, 0],
@@ -135,7 +135,6 @@ describe('return `0` if there is no number adjacent', () => {
 
         expect(
             printAround(grid)
-        ).toEqual([0, 0, 0, 0])
+        ).toEqual([0, 0, 0, 0]);
     });
-
 });
