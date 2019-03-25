@@ -1,5 +1,5 @@
 {
-  "name": "jestTest",
+  "name": "js-tests",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^23.6.0"
-  }
+  },
+  "jest": {
+    "testEnvironment": "node"
+ }
 }
